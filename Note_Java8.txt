@@ -1,0 +1,96 @@
+(Important Features)
+1.Lambda Expression
+2.Functional Interfaces(Used to call Lambda Expression)
+3.Concert Method or Default methods into Interfaces
+4.Static Methods into interfaces
+5.Predefined Functional Interfaces(Predicate,Function,Consumer)
+6.Method Reference  and Constructor Reference by Double colon operator(::)
+7.Streams API
+8.Date and TIme API(joda.org)
+(Focus and Objective of Java 8)
+1.Simplify Programming code
+2.Enable Functional Programming(Lambda Expression) , but it still Object Oriented Language  	
+3.Enable Parallel Programming(To utilise the Multi-Core benefits of latest CPU Processor)
+(Lambda Expression)
+-LISP is the first programming used lambda, followed by c,c++,ruby,C#,.Net and etc.
+-Lastly Java using Lambda Expression to enable Functional programming.
+-To Write more Readable , maintainable and clean concise code.
+-To Use APIs very easily and Effectively
+-To enable Parallel Processing.
+-It is anonymous Function because it does not have name, modifiers and return type.
+-Examples:
+	public void m1() {sop("Hello");}  - java 1.7
+	()->{sop("Hello");} - java 1.8
+	public void add(int a,int b) {sop(a+b);} - java 1.7
+	(int a,int b) -> {sop(a+b);} - java 1.8
+	public int length(String s) {return s.length();} - java 1.7
+	(String s) -> {return s.length();}
+-Rules:
+	Curley braces is optional,if body of Lambda Expression contain only one stmt. 
+		()->sop("Hello");
+	return type of parameter can be remove based on the 'Type Inference'(Based on context, java compiler can guess the type automatically in most scenario)
+		(a,b) -> sop(a+b);
+	paranthesis can be removed if input is a single parameter.
+		s -> return s.length();
+	return key word can be removed if the expression is returning something.
+		s -> s.length();
+	paranthesis is must if there no parameter
+	Curley braces is must if the body contains more than one stmt
+(Functional Interface)
+-It contains only one abstarct method, it is also otherwise called as 'Single Abstract Method'.
+-It can contain N no of Static and default method in functional interfaces.
+-If we use only one abstarct method internally it is funtional interface otherwise it is normal interface.
+-@FunctionalInterface can be used to indicate the compiler that am implementing the functional interface at compile time, but this annotation is optional.
+-But if the annotation is placed, complusory one abstarct method shld be place in the body.
+-@FunctionalInterface used in the inheritance
+	1.Parent and child interface is mentioned as @FunctionalInterface, then parent shld complusory contain one abstarct method, child need not to contain abstarct method.
+	2.But in child interface can use same signature of the parent interface abstarct method, like a concept of overriding.
+	3.But in child interface if we try to use new abstarct method signature, then it is compile time error.
+	4.If parent is mentioned as @FunctionalInterface and child is without @FunctionalInterface, then we can use new abstarct method in the child , but child is not a funtional interface because it has two abstarct method(including parent method also)
+(Calling Lambda Using Functioanl Interface)
+- Refer 'EX_003_LambdaImplementation_Vs_OldImplementation'	
+(Collection using Lambda Expression)
+-Refer EX_004_Collection
+ 
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
