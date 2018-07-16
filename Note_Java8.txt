@@ -36,35 +36,59 @@
 		s -> s.length();
 	paranthesis is must if there no parameter
 	Curley braces is must if the body contains more than one stmt
+-Advantage
+	Enable Functional Programming
+	Enable Parallel Programming
+	Reduce Length of Code
+	Reslove the anonymous Class Complexicity
+	We can handle/assign as value for any Reference Variable Eg: Simple Print Statement
+	We can handle/pass as argument in the constructor.Eg: Thread class
+	We can use updated API in the Java8.	
 (Functional Interface)
--It contains only one abstarct method, it is also otherwise called as 'Single Abstract Method'.
+-It contains only one abstract method, it is also otherwise called as 'Single Abstract Method'.
 -It can contain N no of Static and default method in functional interfaces.
--If we use only one abstarct method internally it is funtional interface otherwise it is normal interface.
+-If we use only one abstract method internally it is funtional interface otherwise it is normal interface.
 -@FunctionalInterface can be used to indicate the compiler that am implementing the functional interface at compile time, but this annotation is optional.
--But if the annotation is placed, complusory one abstarct method shld be place in the body.
+-But if the annotation is placed, complusory one abstract method shld be place in the body.
 -@FunctionalInterface used in the inheritance
-	1.Parent and child interface is mentioned as @FunctionalInterface, then parent shld complusory contain one abstarct method, child need not to contain abstarct method.
-	2.But in child interface can use same signature of the parent interface abstarct method, like a concept of overriding.
-	3.But in child interface if we try to use new abstarct method signature, then it is compile time error.
-	4.If parent is mentioned as @FunctionalInterface and child is without @FunctionalInterface, then we can use new abstarct method in the child , but child is not a funtional interface because it has two abstarct method(including parent method also)
+	1.Parent and child interface is mentioned as @FunctionalInterface, then parent shld complusory contain one abstract method, child need not to contain abstract method.
+	2.But in child interface can use same signature of the parent interface abstract method, like a concept of overriding.
+	3.But in child interface if we try to use new abstract method signature, then it is compile time error.
+	4.If parent is mentioned as @FunctionalInterface and child is without @FunctionalInterface, then we can use new abstract method in the child , but child is not a funtional interface because it has two abstract method(including parent method also)
 (Calling Lambda Using Functioanl Interface)
 - Refer 'EX_003_LambdaImplementation_Vs_OldImplementation'	
 (Collection using Lambda Expression)
 -Refer EX_004_Collection
+(Using Lambda Expression in Anonymous Class)
+-Lambda can use in some of the Anonymous class implementation, because basically, anonymous class is a name less class implementation for a interface, so the interface should be functional interface.
+-Instance variable is not possible to declare inside the lambda
+-We can declare the variable inside the lamba, but it a method/block level variable not instance variable.
+-Refer EX_005_AnonymousClass_Vs_LambdaExpression
+-Different Between AnonymousClass and LambdaExpression
+	1.Class Without name
+	2.Method Without name
+	1.We can write anonymous class extending concert class and abstract class.
+	2.We cant write lambda for anonymous class extending concert class and abstract class.
+	1.Anonymous can write implementation for any number of abstract method in the interface.
+	2.Lambda can write for the interface which has only one abstract method
+	1.We can declare instance variable.
+	2.Instance variable is not possible, but declared variable are took as local variable for that particular lambda expression.
+	1.'this' keyword refers to the currect anonymous class.
+	2.'this' keyword refers to the current outer class. i.e the expression in which the expression is placed.
+	1.It can handle multiple methods for implementation
+	2.It will handle only one abstract method for implementation
+	1.'.class' file will be created for the anonymous class.
+	2.NA
+-If the local/method/block level variable is referred by the lambda, it implicitly become final variable, so we cant chnage the value at any point within/out of lambda expression.
+
+
+
+
+
+	
  
 		
 	
-
-
-
-
-
-
-
-
-
-
-
 
 
 
