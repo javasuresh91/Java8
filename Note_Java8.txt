@@ -80,8 +80,79 @@
 	1.'.class' file will be created for the anonymous class.
 	2.NA
 -If the local/method/block level variable is referred by the lambda, it implicitly become final variable, so we cant chnage the value at any point within/out of lambda expression.
-
-
+(Default Method in Interface)
+-Still 1.7, Interfaces have only public abstract methods and public static final variables only, no concrete methods are available
+-From 1.8, Interface can have default concrete methods
+-implementation class can overwrite and can be used it by calling with implementation object
+-Body of the default method is must.
+-Ambiguity problem(If two different interface has same method , which implemented in a single class) will be over come by using Super keyword
+-Difference Between Interface(With Default Methods) and Abstract Class
+	1.Instance Variable is not possible
+	2.Instance Variable is possible
+	1.Never talk about state of object 
+	2.Talk about state of object
+	1.Constructor is not possible
+	2.Constructor is possible
+	1.Instance and static block is not possible
+	2.Instance and static block is possible
+	1.Lambda is possible
+	2.Lambda is not possible
+	1.Object Class Methods cannot be override
+	2.Object Class Methods can be override
+-Refer EX_006_Default_Static_Methods_Interface
+(Static Methods in Interface)
+-Still 1.7, Static methods are not allowed
+-Form 1.8, Static methods are allowed
+-It is allowed to define general utility methods for the application
+-It does not allowed to access this static method by implemented class object , implemented class name and Also we cant override in the implemented class
+-The way of access is directly by the interface name at any class, if the interface is implemented or not
+-We can declare main method in the interface, so we can run the interface as like class
+-Refer EX_006_Default_Static_Methods_Interface
+(Predefined Functioanl Interface) - Refer EX_007_Predefined_Functional_Interface
+-Types 
+	1.Predicate
+	2.Function
+	3.Consumer
+	4.Supplier
+	5. etc
+-This interface are located at 'java.util.function' package
+-Predicate Interface
+	It is used to check the some conditional checkings(Primitive Types,Class Types,Collections and etc).
+	It check and return the boolean value
+	Introduced in java 1.8
+	It presented in java.util.function
+	We should mention the genedric type of the Predicate.'Predicate<K>'
+	It is a functional Interface Because , it contain only one abstract method called test() with boolean return type and also accept one input parameter
+-Predicate Joining
+	We can join two predicate which accept same type of input
+	negate(),add(),or() these default methods in the Predicate Interface, By using it we can achieve Joining
+-Function
+	It is also a functional interface.
+	It is same as predicate but one different is it return any value.
+	Introduced in java 1.8
+	It presented in java.util.function
+	We should mention the generic type of the Function, it contains two type(Return type(R) and Parameter type(K)). Function<K,R>
+	It has one abstract method to perform opration called apply(). 'R apply(K k)'
+	This method accept generic input value and generic return type value.
+-Difference Between Predicate and Function
+	1.To Perform Check Condition.
+	2.To perform some operation and return any Type of data.
+	1.Only we can mention the input parameter type, return type is always boolean
+	2.We can mention the input and return type.
+	1.test() is the abstract method
+	2.apply() is the abstract method
+-Consumer
+	It is a functional Interface
+	It will take one input and does not return any value (it is void)
+	accept(K k) is the abstract method which is in the Consumer. 
+-Supplier
+	It is a functional Interface
+	It wont take any input but i will return any type.
+	R get() is the abstract method which is in the Supplier	
+	
+	
+	
+	
 
 
 
