@@ -148,7 +148,27 @@
 -Supplier
 	It is a functional Interface
 	It wont take any input but i will return any type.
-	R get() is the abstract method which is in the Supplier	
+	R get() is the abstract method which is in the Supplier
+(Method Reference Using ::) - EX_008_Double_Colon_Operator
+-It is alternative for lambda expression
+-Implementation for Functioanl Interface can be given by ::
+-We can refer the static/non-static method to the abstract method in functional interface which has same parameter Type and count.
+-Then if we call the ab method, the referenced method will be run. 
+-Syntax for static method reference: <Functioanl Interface> <reference variable> = <Class Name> ::<Method name in the class with same prototype as abstract method>
+-Example: Test t = MethodReference::m2; t.m1();
+-Syntax for non-static method reference : <Functioanl Interface> <reference variable> = <Object of that class> ::<Method name in the class with same prototype as abstract method>
+-Example: MethodReference m = new MethodReference();
+		  Test t1 = m::m3;
+		  t1.m1();
+-Advantage :
+	We are re-using the some other method implementation, instead of giving the own implementation
+-Rules :
+	Abstract method and referenced method both should have same argument type.
+	Access modifier , return type , method name and etc of the both method can be different.	
+(Constructor Reference Using ::)
+-Refer EX_008_Double_Colon_Operator
+(STREAM API)
+-
 	
 	
 	
