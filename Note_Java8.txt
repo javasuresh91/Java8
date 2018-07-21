@@ -168,7 +168,38 @@
 (Constructor Reference Using ::)
 -Refer EX_008_Double_Colon_Operator
 (STREAM API)
--
+-It is not related to the File Concept, java.io package already had Stream it is used for File concept but in java 1.8 Stream is totally different concept which is used Collection Framework
+-Stream is a Interface present in the java.util.stream package
+-Stream used to process the data in the Collection object like List,Set and etc
+-stream() Method can access by any Collection Object.
+-stream() is presented in the Collection Interface as default Method return the Stream Object  
+-Refer EX_009_Stream
+-Step to use the Stream
+	1.Need to call the stream()
+	2.Need to Configuration- In Two Mechanism
+		a.Filter 
+			- It is used to filter element/object in the Collection(LIst,Set and etc) object based boolean condition.
+			- filter() method is used to Filter the Collection Elements
+			- filter() method is use the Predicate as parameter because it work based on Boolean Condition.
+			- Predicate parameter can be used as Lambda Expression because it is a functional interface.	
+		b.Map 
+			- For every element in the Collection we need to process and get the equivalent object based on any condition.
+			- map() method is used to create a equivalent element in the Collection based on any condition or functionality
+			- map() method use the Function as parameter because the input may be any collection and output may be any collection it will be genedric
+			- Function parameter can be used as lambda expression because it is a functional interface	
+	3.Processing
+		Lot of utility Methods involved in it.
+-Methods in Stream Class(To do Processing)
+	collect() - This is used collect the data from the Configuration(Steps of Stream) level.
+	count() - Get the length of the element in the Stream after the Configuration(Steps of Stream) level
+	sorted()- Sort the Elements in the Stream by Default Nature of Sorting
+	sorted(Comparater c) - Sort the elements in the Stream by Customising
+	min() & max() - It used to get the minimum and maximum value in the Stream. But the Stream should be in any one of sorted,So Comparater shouldbe the paramater for both methods.
+	get()- Used to get the value once the process is completed if the result is Non-Collection Object.
+	forEach() - It wont return anything. it will iterate the collection object.
+	toArray() - It is used to convert the elements from the Collection to the Array Object.
+-We can apply Stream not even to Collection and array, other than any group of values called Stream.of() Factory Method.	
+
 	
 	
 	
