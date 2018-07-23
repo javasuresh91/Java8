@@ -198,7 +198,9 @@
 	get()- Used to get the value once the process is completed if the result is Non-Collection Object.
 	forEach() - It wont return anything. it will iterate the collection object.
 	toArray() - It is used to convert the elements from the Collection to the Array Object.
--We can apply Stream not even to Collection and array, other than any group of values called Stream.of() Factory Method.	
+-We can apply Stream not even to Collection and array, other than any group of values called Stream.of() Factory Method.
+(DATE and TIME API)
+-Refer 	
 
 	
 	
